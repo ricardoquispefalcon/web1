@@ -1,0 +1,409 @@
+.layout__menu-toggle{
+    display: none;
+}
+
+@media (max-width: 1500px) {
+    .body{
+        padding: 0;
+    }
+    .layout {
+        min-width: auto;
+        width: 85%;
+    }
+
+}
+
+@media(max-width: 1430px){
+    .layout{
+        width: 89%;
+        margin-left: 3rem;
+    }
+}
+
+@media(max-width:1250px){
+    .layout{
+        width: 89%;
+        margin-left: 1.5rem;
+    }
+}
+
+@media(max-width:1130px){
+    .layout__aside{
+        overflow-x: hidden;
+    }
+}
+@media(max-width: 1040px){
+    .body{
+        background-image: none;
+        position: static;
+    }
+    .layout{
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        margin: 0;
+        border-radius: 0;
+        grid-template-areas: "content";
+        grid-template-columns: 100%;
+        overflow-x: hidden;
+    }
+    .layout__menu-toggle{
+        z-index: 1000;
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        font-size: 2.5rem;
+        line-height: 4.8rem;
+        text-align: center;
+        background-color: var(--color-secondary);
+        border-radius: 3rem;
+        color: var(--color-principal);
+        cursor: pointer;
+        transition: all 500ms ease-in-out;
+    }
+    .menu__toggle-icon{
+        color: var(--color-principal);
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 28%;
+        transition: all 300ms ease-in-out;
+    }
+    .fa-bars{
+        opacity: 1;
+    }
+    .fa-xmark{
+        opacity: 0;
+    }    
+
+    .layout__aside{
+        z-index: 999;
+        display: block;
+        position: absolute;
+        max-width: 33rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        text-align: center;
+        overflow: auto;
+        transition: all 300ms ease-in-out;
+
+        margin-right: -100% /*ocultar toda la barra hacia la derecha al 100%*/;
+        opacity: 0;
+    }
+    .layout__aside--visible{
+        width: 100%;
+        margin-right: 0;
+        opacity: 1;
+    }
+    .layout__aside--hidden{
+        margin-right: -100%;
+        opacity: 0;
+    }
+    .userinfo__cont-imagen{
+        width: 13rem;
+        margin-top: 3rem;
+        display: inline-block;
+    }
+    .userinfo__nombre{
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .layout__menu{
+        position: static;
+        margin: 3rem 0;
+    }
+    .menu__list{
+        position: static;
+        width: 100%;
+        background-color: var(--color-secondary);
+        box-shadow: none;
+        margin-left: 0;
+        padding: 0;
+        min-height: auto;
+    }
+    .menu__link{
+        text-decoration: none;
+        display: block;
+        padding: 1.2rem 0;
+    }
+    .menu__link--active .menu__overlay{
+        opacity: 1;
+    }
+    .menu__icon{
+        display: none;
+
+    }
+    .menu__overlay{
+        position: static;
+        opacity: 0.7;
+        margin-top: 0;
+        padding: 0;
+        box-shadow: none;
+        font-size: 1.6rem;
+        
+    }
+    .redessociales__link{
+        margin-top: 0;
+    }
+    .layout__contenido{
+        border-radius: 0;
+        background-color: transparent;
+        height: 100vh;
+    }
+    .contenido__pagina{
+        border-radius: 0;
+    }
+}
+
+@media(max-width: 800px){
+    .reviews__container{
+        flex-direction: column;
+    }
+    
+    .reviews__review{
+        flex-basis: 100%;
+        margin-top: 6rem;
+    }
+    .clients__container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .prices__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__prices{
+        margin: 0 auto;
+    }
+    .prices__box{
+        flex-basis: 100%;
+        width: 75%;
+        margin: 0;
+    }
+    .prices__box:last-child{
+        margin-top: 4.5rem;
+    }
+    .gallery__item{
+        
+        flex-basis: 50%;
+    }
+    .articles__article{
+        flex-basis: 100%;
+    }
+}
+@media(max-width: 742px){
+    .certificates__container{
+        flex-direction: column;
+
+    }
+    .certificate__logo{
+        height: auto;
+    }
+}
+@media(min-width: 713px) and (max-width: 900px){
+    .timeline__divider {
+        left: 30%;
+    }
+}
+@media(min-width: 631px) and (max-width: 922px){
+    .form__container{
+        flex-direction: column;
+    }
+    .form__right{
+        max-width: 100%;
+    }
+    .form__left{
+        margin-right: 0;
+    }
+    .form__input--textarea {
+        height: 15rem;
+    }
+}
+@media(max-width:630px){
+    .pagina__nombre{
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        text-align: center;
+    }
+    .extra__container{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .about__personal-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+    .personal-info__data{
+        flex-basis: 100%;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    .services__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .services__service{
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    .resume__container{
+        flex-direction: column;
+    }
+    .resume__certificates{
+        margin-top: 4rem;
+    }
+    .certificates__container{
+        flex-direction: column;
+    }
+    .certificate__logo{
+        height: auto;
+    }
+    .portfolio__gallery{
+        flex-direction: column;
+    }
+    .contact__container{
+        flex-direction: column;
+    }
+    .form__container{
+        flex-direction: column;
+    }
+    .form__left{
+        margin: 0;
+    }
+    .form__right{
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    .form__group--textarea{
+        height: 14rem;
+    }
+}
+
+@media (min-width: 480px){
+    .timeline__divider {
+        left: 30%;
+    }
+    .certificate__image {
+        padding: 1rem;
+    }
+}
+@media (min-width:375px) and (max-width: 479px){
+    .certificate__image {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px){
+
+    .pagina__nombre{
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        text-align: center;
+        padding: 0 2.5rem;
+    }
+
+    .aside__userinfo{
+        height: 100vh;
+    }
+    .userinfo__redessociales{
+        margin-bottom: 1.8rem;
+    }
+    .reviews__review{
+        margin-right: 0;
+    }
+    .contenido__about{
+        padding: 5rem;
+    }
+    .review__image{
+        margin-left: 25%;
+    }
+    .prices__box{
+        width: 100%;
+    }
+    .prices__btn{
+        font-size: 1.4rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .extra__info{
+        margin-top: 0;
+        padding: 1rem 1rem;
+    }
+    .extra__icon{
+        margin-bottom: 0;
+    }
+    .extra__subtitle{
+        margin: 0.5rem;
+    }
+    .extra__quantity{
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    .content__resume{
+        padding: 4rem;
+    }
+    .resume__left{
+        margin-right: 0;
+    }
+    .timeline__header{
+        padding-right: 0;
+    }
+    .timeline__divider{
+        left: 36%;
+    }
+    .timeline__description{
+        padding-left: 3rem;
+        padding-right: 0;
+    }
+    .timeline__text{
+        font-size: 1.3rem;
+    }
+    .timeline__year{
+        font-size: 1.3rem;
+    }
+    .resume__right{
+        padding: 0;
+    }
+    .content__portfolio, .content__blog, .content__contact{
+        padding: 3.5rem;
+    }
+    .gallery__item{
+        padding: 0;
+    }
+    .articles__article{
+        padding: 0;
+    }
+    .article__bottom{
+        margin-bottom: 2rem;
+    }
+    .article__mask{
+        height: auto;
+    }
+    .contact__info{
+        padding: 0;
+    }
+    .contact__form-box{
+        padding: 0;
+    }
+    .contact__map{
+        margin-top: 2.5rem;
+    }
+    .certificate__logo{
+        padding: 0;
+    }
+    .certificates__certificate{
+        width: 100%;
+    }
+    
+}
